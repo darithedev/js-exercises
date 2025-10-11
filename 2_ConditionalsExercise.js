@@ -189,7 +189,22 @@ function exercise7(num7) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  switch(num7) {
+    case 1:
+      answer7 = "You won!";
+      break;
+    case 7:
+      answer7 = "You are lucky!";
+      break;
+    case 101:
+      answer7 = "Welcome to coding 101!";
+      break;
+    case 1000000:
+      answer7 = "You are one in a million!"
+      break;
+    default:
+      answer7 = "Thanks for that!";
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -206,7 +221,11 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if ((amount1 > minimum && amount1 < maximum) && (amount2 > minimum && amount2 < maximum)) {
+    answer8 = true;
+  } else {
+    answer8 = false;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -225,7 +244,26 @@ function exercise9(item) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (typeof item === typeof 1) {
+    switch(item) {
+      case 1:
+        answer9 = "You won!";
+        break;
+      case 7:
+        answer9 = "You are lucky!";
+        break;
+      case 101:
+        answer9 = "Welcome to coding 101!";
+        break;
+      case 1000000:
+        answer9 = "You are one in a million!"
+        break;
+      default:
+        answer9 = "Thanks for that!"
+    }
+  } else {
+    answer9 = "Please send a number, that was a " + typeof item;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -247,7 +285,15 @@ function exercise10(num10) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if (num10 % 15 === 0) {
+    answer10 = "Fizz Buzz";
+  } else if (num10 % 5 === 0) {
+    answer10 = "Buzz";
+  } else if (num10 % 3 === 0) {
+    answer10 = "Fizz";
+  } else {
+    answer10 = num10;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -260,3 +306,4 @@ function exercise10(num10) {
 //
 
 // Email your file to us or commit your file to GitHub and email us a link.
+
