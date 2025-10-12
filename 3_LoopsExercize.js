@@ -131,7 +131,9 @@ for (let i = 0; i < 101; i++) {
 //
 
 // ANSWER:
-// 
+// In real life, how I would decide which to use depends on the condition. If I need a loop what 
+// required counting, I would likely use a for loop. If I have a condiition that requires a 
+// continuous loop, I would use do while, or while loops. 
 
 // Exercise 11. Now we'll practice using nested loops (a loop inside another loop)!
 // Update the nested loops below to so that for each value of outsideCounter,
@@ -154,10 +156,10 @@ inside 1
 *********************************** 
 */
 
-for (let outsideCounter = 0; outsideCounter <= 3 /*???*/; ) {
+for (let outsideCounter = 0; outsideCounter <= 3; outsideCounter++) {
   console.log("counting down from", outsideCounter);
-  for (let insideCounter = outsideCounter /*???*/ /*???*/; ; ) {
-    console.log("inside" /*???*/);
+  for (let insideCounter = outsideCounter; insideCounter > 0; insideCounter--) {
+    console.log("inside " + insideCounter);
   }
   console.log("***********************************");
 }
@@ -168,6 +170,8 @@ for (let outsideCounter = 0; outsideCounter <= 3 /*???*/; ) {
 //
 
 // ANSWER:
-// 
+// These exercizes were fairly easy. The last exercise I thought was going to be a bit tricky but
+// I figured it out on my own fairly quicly and tested it in the console. 
 
 // Commit your file to GitHub.
+
