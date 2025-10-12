@@ -305,5 +305,9 @@ function exercise10(num10) {
 // Please answer in a comment below.
 //
 
+// ANSWER: This assignment was fairly easy. The only resources I used were MDN for the switch and 
+// the console to check my answers and debug. 
+
 // Email your file to us or commit your file to GitHub and email us a link.
+
 
