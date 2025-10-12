@@ -53,10 +53,29 @@ add (0, 2, 1);
 // Write a function that takes in a person's age and returns true if they should get a discount.
 // Otherwise it should return false.
 // Then write some function calls you would use to test your function.
+function discount (age) {
+  if (age <= 14 || age >= 65) {
+    return true;
+  }
+  return false;
+}
+
+discount(15);
+discount(68);
+discount(5);
 
 // Exercise 6. Write a function that takes 2 parameters -- one number and one string.
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
+function printyPrint(num, str) {
+  for(let i = 0; i < num; i++) {
+    console.log(str);
+  }
+}
+
+printyPrint(3, "hello!");
+printyPrint(10, "Leggo my Eggo!");
+printyPrint(7, "Lucky number 7.");
 
 // Exercise 7. Read the following code (don't run it yet)
 function mysteryFunction1(p1) {
@@ -73,6 +92,12 @@ console.log("The value of z is " + z);
 // 3. What prints out for the value of z
 // Now run the code and see if you're correct.
 // Were you correct? If not, what did you learn?
+
+// ANSWER:
+// 1. What mysteryFunction does is takes the point p1 and returns p1 multiplied by two.
+// 2. The value of 4 prints out for y.
+// 3. The value of 8 prints out for z. 
+// When I ran the code, I was correct.
 
 // Exercise 8. Read the following code (don't run it yet)
 function mysteryFunction2(p1, p2) {
@@ -91,6 +116,13 @@ console.log("The value of b is " + b);
 // Now run the code and see if you're correct.
 // Were you correct? If not, what did you learn?
 
+// ANSWER:
+// 1. What mysteryFunction2 does is take two points p1 and p2, stores the value of p1 minus p2 in 
+// the constant variable x and returns the value stored in x. 
+// 2. The value of 6 prints out for a.
+// 3. The value of 5 prints out for b. 
+// When I ran the code, I was correct.
+
 // Exercise 9. This exercise is to practice reading the documentation for functions.
 // String.split() is a function in the JavaScript standard library that you can use in your code.
 // Read about the split() function here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
@@ -99,15 +131,22 @@ console.log("The value of b is " + b);
 // Here's a string I made representing my grocery list.
 // Using split() and groceryList, make an array of my grocery list items
 const groceryList = "eggs,carrots,orange juice";
+let arr = groceryList.split(",");
 
 // Here's a string I made representing my morning schedule.
 // Using split() and mySchedule, make an array of the *first 2* things I do in the morning
 // There are multiple ways to do this, but try doing it using only the split() function.
 const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
+let arr2 = mySchedule.split("--->", 2);
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
 //
 
+// ANSWER:
+// I did find this assignment pretty easy. The only resource I used was the the console to check 
+// if my answers were correct and to also debug. 
+
 // Commit your file to GitHub.
+
