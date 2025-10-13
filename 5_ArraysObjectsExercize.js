@@ -58,10 +58,20 @@ for (let i = 0; i < len; i++) {
 function arrOfNums (arrNums) {
   let len = arrNums.length;
   for (let i = 0; i < len; i++) {
-    if
+    if(arrNums[i] > 100) {
+      console.log(arrNums[i] + " BIG");
+    } else if (arrNums[i] >= 0 && arrNums[i] <= 100) {
+      console.log(arrNums[i] + " small");
+    } else if (arrNums[i] < 100) {
+      console.log(arrNums[i] + " negative");
+    }
   }
-  return 
+  return "all done";
 }
+
+arrOfNums([-2, 200, 50]);
+arrOfNums([100, 0, 25, 36, 1000, 23456]);
+arrOfNums([-23, -25, 0, 101, 2901927]);
 
 // Exercise 12. Make an object called me that contains the following keys: name, favoriteAnimal, favoriteNumber
 // The values of those keys can be whatever you choose.
@@ -72,15 +82,25 @@ const me = {
 }
 
 // Exercise 13. Add another 2 keys and values to the object (you choose what they are)
+me.petName = "Bunny";
+me.career = "Astro Software Engineer";
 
 // Exercise 14. Update the favoriteAnimal value to something different
+me.favoriteAnimal = "Toad";
 
 // Exercise 15. Print the value of favoriteAnimal.
 // Note: there are at least 2 ways to get the value of a key, try to write both.
+console.log(me.favoriteAnimal);
+console.log(me["favoriteAnimal"]);
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
 //
 
+// This exercise was fairly easy and was one of the most fun I had. I love objects!! I used the console
+// to check my answers and quickly debug. I also used MDN documentation on working with objects though I
+// mearly glanced at it. 
+
 // Commit your file to GitHub.
+
