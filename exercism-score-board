@@ -1,0 +1,37 @@
+const highScoreBoard = {};
+
+highScoreBoard.name = "The Best Ever"
+highScoreBoard.score = 1000000;
+
+console.log(highScoreBoard);
+
+function addPlayer (obj, name, score) {
+  obj.name = name;
+  obj.score = score;
+  return obj;
+}
+
+console.log(addPlayer(highScoreBoard, 'Jose Valim', 486373));
+
+function removePlayer(obj, name) {
+  if (obj.name === name) {
+    delete obj.name;
+    delete obj.score;
+  }
+  return obj;
+}
+
+//console.log(removePlayer(highScoreBoard, 'Jose Valim'));
+console.log(removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras'));
+
+function updateScore (obj, player, add) {
+  console.log(obj)
+  if (obj === player) {
+    console.log(player)
+    console.log(obj.score =+ add);
+  }
+  return obj;
+}
+
+console.log(updateScore({ 'Freyja Ćirić': 12771008 }, 'Freyja Ćirić', 73));
+// => {"Freyja Ćirić", 12771081}
