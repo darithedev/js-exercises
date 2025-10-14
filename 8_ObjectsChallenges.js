@@ -58,6 +58,11 @@ function values (obj) {
 // entries(obj3); // []
 function entries (obj) {
   let arr = [];
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      arr.push([key, obj[key]]);
+    }
+  }
   return arr;
 }
 
@@ -68,6 +73,13 @@ function entries (obj) {
 // ["Tim", "Matt", "Elie"]
 // pluck([{ name: "Tim", isBoatOwner: true }, { name: "Matt", isBoatOwner: false }, { name: "Elie" }],'isBoatOwner')
 // [true, false, undefined]
+function pluck (obj, keyName) {
+  let arr = [];
+  for (let key in obj) {
+    arr.push(obj[key][keyName]);
+  }
+  return arr;
+}
 
 // Exercise 5. Write a function called stringFromObject that generates a string from an object's key/value pairs.
 // The format should be "key = value, key = value".
@@ -78,7 +90,13 @@ function entries (obj) {
 // stringFromObject({ name: 'Elie', job: 'Instructor', isCatOwner: false });
 // "name = Elie, job = Instructor, isCatOwner = false"
 // stringFromObject({}); // ""
-
+function stringFromObject (obj) {
+  let arr = [];
+  for (let key in obj) {
+    arr.push(key + " = " +  obj[key]);
+  }
+  return arr.join(", ");
+}
 // Exercise 6. Write a function called minMaxKeyInObject that accepts an object with numeric keys.*
 // The function should return an array with the following format: [lowestKey, highestKey]
 // Examples:
@@ -86,4 +104,24 @@ function entries (obj) {
 // [1, 10]
 // minMaxKeyInObject({ 1: 'Elie', 4: 'Matt', 2: 'Tim' });
 // [1, 4]
+function minMaxKeyInObject (obj) {
+  let arr = [];
+  let min = 0, max = 0;
+
+  for (let key in obj) {
+    let current = key;
+    if (min == 0) {
+      min = key
+    }
+
+    if (current <= min) {
+      min = key;
+    } else if (current > min) {
+      max = key;
+    }
+  }
+  arr.push(Number(min), Number(max));
+  return arr;
+}
+
 
