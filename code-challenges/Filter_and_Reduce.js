@@ -117,7 +117,6 @@ You should end up with an array that looks like this:
 
 console.log("---- Challenge 3: Filter active users 21 or older. Then use .map() to return their names ----");
 
-
 const users3 = [
   { name: "Alice", active: true, age: 22 },
   { name: "Bob", active: false, age: 25 },
