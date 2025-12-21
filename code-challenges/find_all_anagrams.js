@@ -14,7 +14,7 @@ findAnagrams("abab", "ab") ➞ [0, 1, 2]
 */
 
 function findAnagrams (str, p) {
-    const pLen = p.length; // 3
+    const pLen = p.length;
     let count = pLen;
     let found = [];
     p = p.split('').sort().join('');
@@ -26,7 +26,7 @@ function findAnagrams (str, p) {
         //console.log(compare);
 
         if (compare === p) {
-            found.push(i);
+            found.push(i); // pushes the index where anagram is found
         }
         count++;
     } 
