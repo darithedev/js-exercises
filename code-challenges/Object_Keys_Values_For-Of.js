@@ -5,11 +5,15 @@ const user1 = { name: "Alice", age: 30, city: "New York" };
 // Syntax Example
 // Object.values(user1).forEach((value) => console.log(value))
 
+Object.values(user1).forEach(value => console.log(value));
+
 // Iterating Over the Keys of an Object [Object.keys]
 const user2 = { name: "Alice", age: 30, city: "New York" };
 
 // Syntax Example
 // Object.keys(user2).forEach((key) => console.log(key))
+
+Object.keys(user2).forEach(key => console.log(key));
 
 // Iterate over an Array of Strings [For Of]
 
@@ -25,3 +29,7 @@ for (const element of array1) {
   console.log(element);
 }
 */
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
