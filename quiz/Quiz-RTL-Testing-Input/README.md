@@ -2,6 +2,8 @@
 
 ## Add GIF of expected behavior here!!!
 
+<img src="./public/Screenshot 2026-02-26 at 19.41.22.png">
+
 ### Helpful Tips to Get You Started
 
 ##### Setup Commands
